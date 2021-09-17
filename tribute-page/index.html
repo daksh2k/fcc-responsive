@@ -1,0 +1,54 @@
+<!--User Story #1: My tribute page should have an element with a corresponding id="main", which contains all other elements.
+
+User Story #2: I should see an element with a corresponding id="title", which contains a string (i.e. text) that describes the subject of the tribute page (e.g. "Dr. Norman Borlaug").
+
+User Story #3: I should see a div element with a corresponding id="img-div".
+
+User Story #4: Within the img-div element, I should see an img element with a corresponding id="image".
+
+User Story #5: Within the img-div element, I should see an element with a corresponding id="img-caption" that contains textual content describing the image shown in img-div.
+
+User Story #6: I should see an element with a corresponding id="tribute-info", which contains textual content describing the subject of the tribute page.
+
+User Story #7: I should see an a element with a corresponding id="tribute-link", which links to an outside site that contains additional information about the subject of the tribute page. HINT: You must give your element an attribute of target and set it to _blank in order for your link to open in a new tab (i.e. target="_blank").
+
+User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.
+
+User Story #9: The img element should be centered within its parent element.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+</head>
+<body>
+    <main id="main">
+     <h1 id="title">Howard Hughes</h1>
+     <p id="subhead">The Aviator</p>
+     <div id="img-div">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Howard_Hughes.jpg/440px-Howard_Hughes.jpg" alt="Howard hughes" id="image">
+         <p id="img-caption">Hughes with his Boeing 100 in the 1940s</p>
+     </div>
+     <section id="tribute-info">
+         <h2>Significant Acheivements:</h2>
+         <ul class="achivements">
+             <li class="list-item">Harmon Trophy (1936 and 1938)</li>
+               <li class="list-item"> Collier Trophy (1938)</li>
+               <li class="list-item"> Congressional Gold Medal (1939)</li>
+               <li class="list-item"> Octave Chanute Award (1940)</li>
+               <li class="list-item"> National Aviation Hall of Fame (1973)</li>
+               <li class="list-item"> International Air & Space Hall of Fame (1987)</li>
+               <li class="list-item"> Motorsports Hall of Fame of America (2018)</li>
+         </ul>
+
+         <h3>More info about <a href="https://en.wikipedia.org/wiki/Howard_Hughes" target="_blank"id="tribute-link">The Aviator!</a></h3>
+     </section>
+
+    </main>
+</body>
+</html>
