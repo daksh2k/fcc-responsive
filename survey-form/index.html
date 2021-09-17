@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <h1 id="title">Favourite Movie</h1>
+    <p id="description">Survey for Favourite Movie</p>
+    <div class="form-container">
+    <form action="submit" id="survey-form">
+        <label id="name-label" for="name">Name: </label>
+        <input type="text" id="name" placeholder="Enter your name" required><br>
+        <label for="email" id="email-label">Email: </label>
+        <input type="email" id="email" placeholder="Enter Your Email" required>
+        <br>
+        <label for="number" id="number-label"> Age: </label>
+        <input id="number" type="number" min="18" max="60" placeholder="18">
+        <br>
+        <label for="dropdown">Select Era: </label>
+        <select name="era" id="dropdown">
+            <option value="1990">1990-2000</option>
+            <option value="2000">2000-2010</option>
+            <option value="2010">2010-2020</option>
+        </select>
+        <br>
+        <label for="radio">Select genre:</label>
+        <br>
+        <label for="comedy">Comedy<input type="radio" id="comedy" value="commedy" name="genre"></label>
+        <label for="romance">Romance<input type="radio" id="romance" value="romance" name="genre"></label>
+        <label for="thriller">Thriller<input type="radio" id="thriller" value="thriller" name="genre"></label>
+        <br><br>
+        <label for="checkbox">Recommendations!</label>
+        <br>
+        <label for="avt">The Aviator<input type="checkbox" id="avt" value="avt" name="rec"></label>
+        <label for="romance">Interstellar<input type="checkbox" id="int" value="int" name="rec"></label>
+        <label for="thriller">Inception<input type="checkbox" id="incep" value="inc" name="rec"></label>
+        <br>
+        <label for="additional"></label>
+            <textarea name="Additional Comments" id="additional" cols="60" rows="7" placeholder="Enter any additional comments here..."></textarea>
+        <br>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+</div>
+    
+</body>
+</html>

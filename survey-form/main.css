@@ -1,0 +1,47 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ddf;
+    background-color: #333;
+}
+#additional{
+    background-color:#aaa;
+}
+h1,p{
+    text-align: center;
+}
+p{
+    font-style: italic;
+}
+.form-container{
+    display: flex;
+    justify-content:center;
+}
+form{
+    background: linear-gradient(35deg,rgb(71, 16, 71),rgb(54, 105, 131));
+    text-align: left;
+    max-width: 900px;
+    height: auto;
+    box-shadow: .1rem 0 .3rem #AFA;
+    padding: 1rem;
+}
+input,
+button,
+select,
+textarea{
+    margin: 1rem;
+    padding: .3rem;
+    border: 1px solid green;
+    border-radius: 7px;
+}
+input{
+    height: 1.7rem;
+}
+label{
+    font-size: 1.5rem;
+    color:aqua;
+}
+button{
+    width: 5rem;
+    height: 2rem;
+
+}
