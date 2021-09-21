@@ -1,10 +1,14 @@
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ddf;
-    background-color: #333;
+        background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 #additional{
     background-color:#aaa;
+    max-width: 90%;
 }
 h1,p{
     text-align: center;
@@ -15,13 +19,18 @@ p{
 .form-container{
     display: flex;
     justify-content:center;
+    align-content: center;
 }
 form{
-    background: linear-gradient(35deg,rgb(71, 16, 71),rgb(54, 105, 131));
-    text-align: left;
-    max-width: 900px;
+    width: 80%;
+    max-width: 600px;
     height: auto;
-    box-shadow: .1rem 0 .3rem #AFA;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    text-align: left;
     padding: 1rem;
 }
 input,
@@ -35,13 +44,26 @@ textarea{
 }
 input{
     height: 1.7rem;
+    width: 50%;
 }
 label{
     font-size: 1.5rem;
     color:aqua;
 }
+.submit-but{
+  display: flex;
+  justify-content: center;
+}
 button{
-    width: 5rem;
-    height: 2rem;
-
+    padding: .8rem;
+    width: 10rem;
+    background-color: green;
+    color: white;
+    font-size: 1.3rem;
+}
+.radio{
+  color: white;
+}
+input[type="radio"],input[type="checkbox"]{
+  width: 2rem;
 }
