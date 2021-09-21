@@ -1,0 +1,95 @@
+:root{
+    --theme-color: rgb(17,135,214)
+}
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    position:fixed;
+    right: 0;
+    top:0;
+    display: flex;
+    background-color: rgb(15, 55, 129);
+    width: 100%;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: .6rem;
+}
+@media(max-width: 767px){
+    header{
+        flex-direction: column;
+    }
+}
+#header-img{
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    padding: .5rem;
+}
+.logo-cont{
+    display: flex;
+}
+.logo-head{
+    margin-left: 1.5rem;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+}
+.sub-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    padding: .5rem;
+}
+.subhead,.head-desc{
+    text-align: center;
+}
+.head-desc{
+    font-style: italic;
+    margin-top: -1rem;
+    font-weight: 400;
+}
+#video{
+    width: 100%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+#email{
+    margin: .5rem;
+    padding: .4rem;
+    border-radius: 4px;
+    width: 16rem;
+    height: 2rem;
+    border: 1px solid var(--theme-color);
+}
+#submit{
+    margin: .8rem auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+    height: 3rem;
+    width: 7rem;
+    color: var(--theme-color);
+    border: 2px solid var(--theme-color);
+    background-color: white;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
+#submit:hover{
+    cursor: pointer;
+    background-color: var(--theme-color);
+    border: none;
+    color: white;
+}
