@@ -1,0 +1,123 @@
+:root{
+    --blue: #007bff;
+    --blue2: #0069d9;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(63, 63, 63);
+    font-size: 1rem;
+}
+nav{
+    padding: 1rem 0 1rem;
+    color: white;
+    background-color: #333; 
+    position: sticky;
+    top: 0;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 16rem;
+    border: 1px solid white;
+    z-index: 5;
+}
+main{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;  
+    position: relative;
+    margin-left: 2rem;
+}
+.hide{
+    display: none!important;
+}
+.collapse{
+    display: none;
+}
+a{
+    color: var(--blue);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration:underline;
+    color: var(--blue2);
+}
+.nav-heading{
+    font-size: 1.8rem;
+    padding: 0 .3rem .5rem 1rem;
+}
+.nav-link{
+    border: 1px solid white;
+    display: block;
+    border-left: none;
+    padding: 1rem;
+    font-size: 1.3rem;
+    transition: background-color .2s ease-in-out;
+}
+.nav-link:hover{
+    background-color: rgb(41, 41, 41);
+    text-decoration: none;
+}
+.nav-link:last-child{
+    border-bottom: none;
+}
+.sec-heading,.hash{
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: inline;
+}
+.hash{
+    margin-left: .5rem;
+    opacity: 0;
+}
+.sec-heading:hover .hash{
+    opacity: .7;
+}
+.hash:hover{
+    opacity: 1;
+}
+.doc-text{
+    color:rgb(200, 200, 200)
+}
+.code-eg{
+    color: rgb(194, 194, 41)
+}
+@media(max-width: 700px){
+    .container{
+        flex-direction: column;
+    }
+    nav{
+        width: 100%;
+        height: auto;
+        left: 0;
+        padding: 0;
+    }
+    .nav-link{
+        border: 1px solid white;
+    }
+    main{
+        margin: 1rem auto;
+        padding-top: 5rem;
+    }
+    .mh-cont{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+    }
+    .collapse{
+        display: inline;
+        background-color: var(--blue);
+        color: white;
+        font-size: 1.5rem;
+        transform: rotate(90deg);
+        outline: none;
+        border: none;
+        margin-right: .5rem;
+    }
+}

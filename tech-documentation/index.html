@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Python Documentation</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <div class="mh-cont"><header class="nav-heading">Python Documentation</header><button class="collapse" onclick="toggleNav()">></button></div>
+            <a href="" class="nav-link"></a>
+            <a href="" class="nav-link"></a>
+            <a href="" class="nav-link"></a>
+            <a href="" class="nav-link"></a>
+            <a href="" class="nav-link"></a>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section">
+                <header class="sec-heading">Built-in Types<a href="" class="hash">#</a></header>
+                <p class="doc-text">The following sections describe the standard types that are built into the interpreter.</p>
+                <p class="doc-text">The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions.</p>
+                <p class="doc-text">Some collection classes are mutable. The methods that add, subtract, or rearrange their members in place, and don’t return a specific item, never return the collection instance itself but None.</p>
+                <p class="doc-text">Some operations are supported by several object types; in particular, practically all objects can be compared for equality, tested for truth value, and converted to a string (with the <code class="code-eg"></code>repr() </code>function or the slightly different <code class="code-eg">str()</code>function). The latter function is implicitly used when an object is written by the <code class="code-eg">print() </code>function.</p>
+                <code class="code-eg"></code>
+            </section>
+            <section class="main-section">
+                <header class="sec-heading">The while statement<a href="" class="hash">#</a></header>
+                <p class="doc-text">The while statement is used for repeated execution as long as an expression is true:</p>
+                <code class="code-eg">while_stmt ::=  "while" assignment_expression ":" suite
+                    ["else" ":" suite]</code>
+                    <p class="doc-text">This repeatedly tests the expression and, if it is true, executes the first suite; if the expression is false (which may be the first time it is tested) the suite of the else clause, if present, is executed and the loop terminates.</p>
+                    <p class="doc-text">A break statement executed in the first suite terminates the loop without executing the else clause’s suite. A continue statement executed in the first suite skips the rest of the suite and goes back to testing the expression.</p>
+            </section>
+            <section class="main-section">
+                <header class="sec-heading">The if statement<a href="" class="hash">#</a></header>
+                <p class="doc-text">The if statement is used for conditional execution:</p>
+                <code class="code-eg">if_stmt ::=  "if" assignment_expression ":" suite
+                    ("elif" assignment_expression ":" suite)*
+                    ["else" ":" suite]</code>
+                    <p class="doc-text">It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section Boolean operations for the definition of true and false); then that suite is executed (and no other part of the if statement is executed or evaluated). If all expressions are false, the suite of the else clause, if present, is executed.</p>
+            </section>
+            <section class="main-section">
+                <header class="sec-heading">Lists<a href="" class="hash">#</a></header>
+                <p class="doc-text">Lists are mutable sequences, typically used to store collections of homogeneous items (where the precise degree of similarity will vary by application).</p>
+                <code class="code-eg">class list([iterable])</code>
+                <span>Lists may be constructed in several ways:</span>
+                <ul>
+                    <li>Using a pair of square brackets to denote the empty list:<code class="code-eg"> []</code></li>
+                    <li>Using square brackets, separating items with commas:<code class="code-eg"> [a], [a, b, c]</code></li>
+                    <li>Using a list comprehension:<code class="code-eg"> [x for x in iterable]</code></li>
+                    <li>Using the type constructor: <code class="code-eg">codelist()</code> or <code class="code-eg"></code>list(iterable)</code></li>
+                </ul>
+            </section>
+            <section class="main-section">
+                <header class="sec-heading">Tuples<a href="" class="hash">#</a></header>
+                <p class="doc-text">Tuples are immutable sequences, typically used to store collections of heterogeneous data (such as the 2-tuples produced by the enumerate() built-in). Tuples are also used for cases where an immutable sequence of homogeneous data is needed (such as allowing storage in a set or dict instance).</p>
+                <code class="code-eg">class tuple([iterable])</code>
+                <span>Tuples may be constructed in several ways:</span>
+                <ul>
+                    <li>Using a pair of parentheses to denote the empty tuple:<code class="code-eg"> ()</code></li>
+                    <li>Using a trailing comma for a singleton tuple:<code class="code-eg"> a, or (a,)</code></li>
+                    <li>Separating items with commas::<code class="code-eg">a, b, c or (a, b, c)</code></li>
+                    <li>Using the<code class="code-eg"></code> tuple()</code> built-in: <code class="code-eg"></code>tuple()</code> or <code class="code-eg"></code>tuple(iterable)</code></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src='main.js'></script>
+</body>
+</html>
