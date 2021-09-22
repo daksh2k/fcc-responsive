@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    --tcolor: rgb(255, 255, 255);
+    --bcolor: rgb(39, 39, 39);
+    --blue: #3a3a3a;
+    --blue2: #0069d9;
+    --purple: rgb(89,17,95);
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: background-color .5s ease-in-out,color .5s ease-in-out;
+}
+body.light-theme {
+    --tcolor: rgb(50, 50, 50);
+    --bcolor: rgb(238, 238, 238);
+    --purple: rgb(168, 39, 180);
+}
+.hide{
+    display: none;
+}
+body{
+    background-color: var(--bcolor);
+    color: var(--tcolor);
+}
+a{
+    text-decoration: none;
+}
+#navbar{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--blue);
+    justify-content: flex-end;
+    align-content: center;
+    box-shadow: rgba(var(--tcolor),0.2) 0px 7px 29px 0px;
+}
+.links-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.anchor-link{
+    color: white;
+    padding: 1rem;
+    font-size: 1.8rem;
+}
+.theme-toggle{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: unset;
+    color: white;
+    padding: 1rem;
+}
+.theme-icon{
+    font-size: 1.8rem;
+}
+.sec{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+#welcome-section{
+    background: linear-gradient(0deg,var(--purple),var(--bcolor))
+}
+#projects{
+    background-color: var(--purple);
+}
+#contacts{
+    background: linear-gradient(180deg,var(--purple),var(--bcolor))
+}
+.m-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.name-before{
+    font-size: 4rem;
+    font-weight: 500;
+}
+.name{
+    font-family: 'Lobster', sans-serif;
+    font-weight: 600;
+    margin-left: 1rem;
+    font-size: 4.5rem;
+}
+.head-desc{
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-top: -2rem;
+}
+.c-heading,.p-heading{
+    font-size: 4rem;
+}
+#projects{
+    justify-content: flex-start;
+}
+.p-cont{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.project-tile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: rgba(200, 210, 218, 0.3);
+    box-shadow: rgba(122, 126, 131, 0.2) 0px 8px 24px;
+}
+.tile-img{
+    width: 100%;
+    height: 100%;
+    max-height: 35rem;
+    align-self: center;
+}
+.tile-heading{
+    color: black;
+    background-color: rgba(122, 126, 131, 1);
+    padding: .8rem .3rem;
+}
+.social-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+}
+.s-links{
+    margin: 0 2rem;
+    padding: 1rem;
+    transition: all .4s ease-in-out;
+    animation: trans2 .6s forwards;
+}
+.s-links:hover{
+    animation: trans .4s forwards;
+}
+@keyframes trans2 {
+    0% {
+        transform: translateY(1rem) scale(1.1);
+    }
+    100% {
+        transform: translateY(0rem) scale(1);
+    }
+  }
+@keyframes trans {
+    0% {
+      transform: translateY(0rem) scale(1);
+    }
+    100% {
+      transform: translateY(1rem) scale(1.1);
+    }
+  }
+.s-links img{
+    width: 60px;
+    height: 60px;
+}
+
+@media(max-width: 800px){
+    #navbar{
+        justify-content: center;
+    }
+    .anchor-link{
+        padding: 0 .5rem;
+    }
+    a[href^="#cont"]{
+        margin-right: 10px;
+    }
+    .m-heading{
+        flex-direction: column;
+    }
+    .name{
+        margin-top: -1.5rem;
+    }
+    .social-cont{
+        margin: 2rem 1rem;
+    }
+    .s-links{
+        margin: 0 .5rem;
+        padding: .5rem;
+    }
+    .s-links img{
+        width: 45px;
+        height: 45px;
+    }
+    .p-cont{
+        grid-template-columns: 45% 45%;
+    }
+}
