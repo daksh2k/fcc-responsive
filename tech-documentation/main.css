@@ -120,4 +120,7 @@ a:hover{
         border: none;
         margin-right: .5rem;
     }
+    .main-section{
+        padding: 4rem 1rem;
+    }
 }
