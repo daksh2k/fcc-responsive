@@ -73,13 +73,16 @@ a{
     align-content: center;
 }
 #welcome-section{
-    background: linear-gradient(0deg,var(--purple),var(--bcolor))
+    background: linear-gradient(0deg,var(--purple),var(--bcolor));
+    transition: background .5s ease-in-out;
 }
 #projects{
     background-color: var(--purple);
+    transition: background .5s ease-in-out;
 }
 #contacts{
-    background: linear-gradient(180deg,var(--purple),var(--bcolor))
+    background: linear-gradient(180deg,var(--purple),var(--bcolor));
+    transition: background .5s ease-in-out;
 }
 .m-heading{
     display: flex;
@@ -181,6 +184,9 @@ a{
     a[href^="#cont"]{
         margin-right: 10px;
     }
+  #projects{
+    height: 100%;
+  }
     .m-heading{
         flex-direction: column;
     }
