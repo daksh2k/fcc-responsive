@@ -1,33 +1,55 @@
 // Theme toggle
 const prefersLightScheme = window.matchMedia("(prefers-color-scheme: light)");
-const storedTheme =  localStorage.getItem('theme');
+function getStored(){
+    try {
+        localStorage.setItem('feature_test', 'yes');
+        if (localStorage.getItem('feature_test') === 'yes') {
+            localStorage.removeItem('feature_test');
+            return localStorage.getItem('theme')
+        } else {
+             console.error("Check privacy settings");
+             return 0
+        }
+    } catch(e) {
+        console.error("Check privacy settings",e);
+        return 0
+    } 
+}
+
 const themeIcon = document.querySelector(".theme-icon");
 function shiftToLight(){
-    themeIcon.innerText = "light_mode"
+    themeIcon.innerText = "dark_mode"
     document.body.classList.remove("dark-theme")
     document.body.classList.add("light-theme")
-    localStorage.setItem('theme', 'light')
+  try{
+        localStorage.setItem('theme', 'light')
+   } catch(e){
+     
+   }
 }
 function shiftToDark(){
-    themeIcon.innerText = "dark_mode"
+    themeIcon.innerText = "light_mode"
     document.body.classList.remove("light-theme")
     document.body.classList.add("dark-theme")
-    localStorage.setItem('theme', 'dark')
+    try{
+      localStorage.setItem('theme', 'dark')
+    } catch(e){
+      
+    }
 }
 function switchTheme(){
-    console.log("clicked")
     if(document.body.classList.contains("dark-theme")) shiftToLight()
     else shiftToDark()
 }
 function checkTheme(){
-    if(!storedTheme){
+    if(!getStored()){
         if (prefersLightScheme.matches) shiftToLight()
         else shiftToDark()
     }
     else{
-        if(storedTheme=="light") shiftToLight()
+        if(getStored()=="light") shiftToLight()
         else  shiftToDark()
     }
 }
-// checkTheme();
+checkTheme();
 document.querySelector(".theme-toggle").addEventListener("click", switchTheme)
