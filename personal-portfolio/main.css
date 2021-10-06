@@ -84,6 +84,7 @@ a{
     background: linear-gradient(180deg,var(--purple),var(--bcolor));
     transition: background .5s ease-in-out;
     height: auto;
+    padding-top: 20vh;
 }
 .m-heading{
     display: flex;
