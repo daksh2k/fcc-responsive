@@ -83,6 +83,7 @@ a{
 #contacts{
     background: linear-gradient(180deg,var(--purple),var(--bcolor));
     transition: background .5s ease-in-out;
+    height: auto;
 }
 .m-heading{
     display: flex;
@@ -110,6 +111,7 @@ a{
 }
 #projects{
     justify-content: flex-start;
+    height: auto;
 }
 .p-cont{
     display: grid;
